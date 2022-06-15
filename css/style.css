@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: rgb(18, 245, 150);
+
+}
+
+.board,
+.playground,.winner {
+    display: grid;
+    place-items: center;
+}
+
+.confirm-player, .winner {
+    background-color: white;
+
+    margin-top: 30vh;
+    padding: 1rem;
+}
+
+.playground {
+    padding: 0;
+    margin-top: 30vh;
+}
+
+.showCurrent {
+    background-color: white;
+    width: 280px;
+}
+
+.confirm-player {
+    width: 20rem;
+    height: 10rem;
+}
+
+.confirm-player h2 {
+    line-height: 3rem;
+}
+
+.playerBtn,
+.showCurrent {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.playerO,
+.playerX {
+    background-color: rgb(18, 245, 150);
+    border: none;
+    width: 145px;
+    padding: 0.7rem;
+    color: white;
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: 700;
+}
+
+.playerO:hover,
+.playerX:hover {
+    background-color: rgba(18, 245, 150, 0.8);
+}
+
+.nodisp {
+    display: none;
+}
+
+.currentPlayerX,
+.currentPlayerO {
+    background-color: white;
+
+    padding: 0.7rem;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.active {
+    background-color: rgb(18, 245, 150);
+    color: white;
+}
+
+span {
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.play {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 93px 93px 93px;
+    grid-template-rows: 93px 93px 93px;
+    justify-items:center;
+}
+
+.boxes {
+    background-color: white;
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+    margin-top: 5px;
+    vertical-align: middle;
+
+}
+
+.replay{
+ background-color: rgb(18, 245, 150);
+ border: none;
+ padding: 1rem;
+ font-size: 1rem;
+ font-weight: bold;
+ color: white;
+ margin-left: 1rem;
+}
+.winner{
+    font-size: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    
+}

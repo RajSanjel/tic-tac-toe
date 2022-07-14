@@ -10,12 +10,14 @@ body {
 }
 
 .board,
-.playground,.winner {
+.playground,
+.winner {
     display: grid;
     place-items: center;
 }
 
-.confirm-player, .winner {
+.confirm-player,
+.winner {
     background-color: white;
 
     margin-top: 30vh;
@@ -65,10 +67,6 @@ body {
     background-color: rgba(18, 245, 150, 0.8);
 }
 
-.nodisp {
-    display: none;
-}
-
 .currentPlayerX,
 .currentPlayerO {
     background-color: white;
@@ -80,10 +78,7 @@ body {
     width: fit-content;
 }
 
-.active {
-    background-color: rgb(18, 245, 150);
-    color: white;
-}
+
 
 span {
     font-size: 2rem;
@@ -92,10 +87,10 @@ span {
 
 .play {
     display: grid;
-    grid-auto-flow: column;
+    grid-auto-flow: row;
     grid-template-columns: 93px 93px 93px;
     grid-template-rows: 93px 93px 93px;
-    justify-items:center;
+    justify-items: center;
 }
 
 .boxes {
@@ -108,18 +103,59 @@ span {
 
 }
 
-.replay{
- background-color: rgb(18, 245, 150);
- border: none;
- padding: 1rem;
- font-size: 1rem;
- font-weight: bold;
- color: white;
- margin-left: 1rem;
+.replay {
+    background-color: rgb(18, 245, 150);
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin-left: 1rem;
 }
-.winner{
+
+.winner {
     font-size: 2rem;
     display: grid;
     grid-auto-flow: column;
-    
+
+}
+
+
+.nodisp {
+    display: none;
+}
+
+.boxes {
+    text-align: center;
+    color: black;
+}
+
+.play p {
+    display: grid;
+    text-align: center;
+    place-items: center;
+    padding: 16px;
+    font-size: 50px;
+}
+
+.active {
+    background-color: rgb(18, 245, 150);
+    color: white;
+}
+
+.disp {
+    display: block;
+}
+
+#6 {
+    background-color: red;
+}
+
+.winner p {
+    display: flex;
+    align-items: center;
+}
+
+.winner p span {
+    margin: 6px;
 }

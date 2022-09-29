@@ -47,49 +47,53 @@ function checkTurn() {
 
 function bot(args) {
     botPlaying = true;
-    checkWinner()
-    let arrayBox = []
-    for (let i = 0; i < playBox.length; i++) {
-        if (playBox[i].childElementCount == 0) {
-            arrayBox.push(i);
+    let confirm = checkWinner()
+    console.log(confirm)
+    if (!confirm) {
+        let arrayBox = []
+        for (let i = 0; i < playBox.length; i++) {
+            if (playBox[ i ].childElementCount == 0) {
+                arrayBox.push(i);
+            }
         }
-    }
-    if (arrayBox.length > 0) {
-        i = arrayBox[getRandomNumber(arrayBox)]
-        console.log(i)
-        setTimeout(() => {
-            playBox[i].innerHTML = `<p> ${args} </p>`;
-            checkTurn()
-            checkWinner()
-            botPlaying = false;
-        }, 500)
+        if (arrayBox.length > 0) {
+            i = arrayBox[ getRandomNumber(arrayBox) ]
+            setTimeout(() => {
+                playBox[ i ].innerHTML = `<p> ${ args } </p>`;
+                checkTurn()
+                checkWinner()
+                botPlaying = false;
+            }, 500)
+        }
     }
 }
 
 
 function realPlayer(args) {
-    checkWinner()
     playBox.forEach(element => {
         element.addEventListener("click", () => {
-            console.log(botPlaying)
             if (element.innerHTML == "" && botPlaying == false) {
-                element.innerHTML = `<p> ${args} </p>`;
-                checkTurn()
-                checkWinner()
+                let confirm = checkWinner();
+                if (!confirm) {
+                    element.innerHTML = `<p> ${ args } </p>`;
+                    checkTurn()
+                }
                 if (args == "X") {
                     bot("O")
                 } else {
                     bot("X")
                 }
             } else {
-                console.log("taken or bot is playing bruh")
                 checkWinner()
             }
-
         })
     });
-}
 
+}
+// function removeListener() {
+//     playerX.removeEventListener()
+//     playerO.removeEventListener()
+// }
 
 function getRandomNumber(array) {
     return Math.floor((Math.random() * array.length) + 0);
@@ -109,33 +113,41 @@ function checkWinner() {
 
     if (box1 == box2 && box2 == box3 && box1 != "") {
         winner(box1)
+        return true
     } else if (box4 == box5 && box5 == box6 && box4 != "") {
         winner(box4)
+        return true
     } else if (box7 == box8 && box8 == box9 && box7 != "") {
         winner(box7)
+        return true
     } else if (box1 == box5 && box5 == box9 && box1 != "") {
         winner(box1)
+        return true
     } else if (box3 == box5 && box5 == box7 && box3 != "") {
         winner(box3)
+        return true
     } else if (box1 == box4 && box4 == box7 && box1 != "") {
         winner(box1)
+        return true
     } else if (box2 == box5 && box5 == box8 && box2 != "") {
         winner(box2)
+        return true
     } else if (box3 == box6 && box9 == box6 && box3 != "") {
         winner(box3)
+        return true
     } else if (box1 != "" && box2 != "" && box3 != "" && box4 != "" && box5 != "" && box6 != "" && box7 != "" && box8 != "" && box9 != "") {
         tie()
+        return true
     }
+    return false
 }
 
 function winner(args) {
-    playground.classList.add("nodisp")
     document.querySelector(".winner").classList.remove("nodisp")
     document.querySelector(".winner p span").innerHTML = args;
 }
 
 function tie() {
-    playground.classList.add("nodisp")
     document.querySelector(".winner").classList.remove("nodisp")
     document.querySelector(".winner p").innerHTML = "Its a tie!";
 

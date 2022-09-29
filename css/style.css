@@ -6,12 +6,14 @@
 html,
 body {
     background-color: rgb(18, 245, 150);
-
+    min-height: 100vh;
+    min-width: 100vw;
+    display: grid;
+    place-items: center;
 }
 
-.board,
-.playground,
-.winner {
+
+.playground {
     display: grid;
     place-items: center;
 }
@@ -19,14 +21,12 @@ body {
 .confirm-player,
 .winner {
     background-color: white;
-
-    margin-top: 30vh;
+    margin: 1em;
     padding: 1rem;
 }
 
 .playground {
     padding: 0;
-    margin-top: 30vh;
 }
 
 .showCurrent {

@@ -1,50 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <script src="./js/logic.js" defer></script>
     <title>Tic Tac Toe</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="board">
-        <div class="confirm-player">
-            <h1>Tic Tac Toe</h1>
-            <hr>
-            <h2>Select what you want to be.</h2>
-            <div class="playerBtn">
-                <button class="playerO">Player </span>O</span></button>
-                <button class="playerX">Player <span>X</span></button>
-            </div>
+      <div class="confirm-player">
+        <h1>Tic Tac Toe</h1>
+        <hr />
+        <h2>Select what you want to be.</h2>
+        <div class="playerBtn">
+          <button class="playerO">Player <span>O</span></button>
+          <button class="playerX">Player <span>X</span></button>
         </div>
-        <div class="playground nodisp">
-            <p class="error"></p>
-            <div class="showCurrent">
-                <p class="currentPlayerO"><span>O</span>'s Turn</p>
-                <p class="currentPlayerX"><span>X</span>'s Turn</p>
-            </div>
-            <div class="play active">
-                <div id="box1" class="boxes"></div>
-                <div id="box2" class="boxes"></div>
-                <div id="box3" class="boxes"></div>
-                <div id="box4" class="boxes"></div>
-                <div id="box5" class="boxes"></div>
-                <div id="box6" class="boxes"></div>
-                <div id="box7" class="boxes"></div>
-                <div id="box8" class="boxes"></div>
-                <div id="box9" class="boxes"></div>
-            </div>
+      </div>
+      <div class="winner nodisp">
+        <p>Player <span></span> won the game!</p>
+        <button class="replay">Replay</button>
+      </div>
+      <div class="playground nodisp">
+        <p class="error"></p>
+        <div class="showCurrent">
+          <p class="currentPlayerO"><span>O</span>'s Turn</p>
+          <p class="currentPlayerX"><span>X</span>'s Turn</p>
         </div>
-        <div class="winner nodisp">
-       <p>    Player <span> </span> won the game! </p> <button class="replay">Replay</button>
+        <div class="play active">
+          <div id="box1" class="boxes"></div>
+          <div id="box2" class="boxes"></div>
+          <div id="box3" class="boxes"></div>
+          <div id="box4" class="boxes"></div>
+          <div id="box5" class="boxes"></div>
+          <div id="box6" class="boxes"></div>
+          <div id="box7" class="boxes"></div>
+          <div id="box8" class="boxes"></div>
+          <div id="box9" class="boxes"></div>
         </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
